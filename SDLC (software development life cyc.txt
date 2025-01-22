@@ -1,0 +1,145 @@
+SDLC (software development life cycle )
+----
+why Devops ?
+---------
+
+1.Traditional Waterfall model
+------------------------------
+
+Requirement & gathering Analysis
+          |
+       Design
+          |
+       implements
+          |
+        Test
+          |
+       Deploy
+          |
+      Maintenance 
+
+2 .What is Agile Methodology 
+-----------------------------
+
+  @ In this Agile methodology each project is broken 
+    up into several "iterations"
+  @ all the iterations should be duration (between 2 to 8 weeks )
+  @ At the end of each iteration a working product should be Delivered 
+
+    1st iteration -----> 2nd Iteration----> 3rd iteration
+
+# Limitations of Agile 
+-------------------------
+
+    @ Develop team [wants to Change]
+     
+       (code works fine in my Laptop)
+ 
+    @ Operation Team [wants to Stability]
+        
+      (there is some problem with code it does not working in production )
+
+ ## DEVELOPMENT WITHOUT DEVOPS CULTURE 
+
+  --> Release and Deploy mismatch 
+  --> unpredictable issues 
+  --> blame game 
+  --> lack of monitoring 
+
+## DEVOLOPMENT WITH DEVOPS CULTURE 
+
+  --> Streamed delivers 
+  --> Team work i collaboration 
+  --> continuous monitoring and feedback 
+
+## WHAT NEEDS TO BE DONE ?
+
+   @ For Developers 
+
+      (use system with little or no waiting time )   
+   
+   @ for operations 
+
+     --> system should be up and running most of the time 
+     --> system required for easy administration 
+     --> effective monitoring feedback system should be established 
+ 
+
+## WHAT EXACTLY IS DEVOPS IN REAL LIFE 
+
+    
+           plan
+             |
+           code 
+             |
+           build
+             |
+            test
+             |
+           Release 
+             |
+           deploy
+             |
+           operation
+             |
+           monitoring
+
+## WHAT DEVOPS  IS NOT 
+  
+   --> Devops is not a role ,person or organization 
+   --> devops is not a separate team 
+   --> Devops is not a Production or tool 
+   --> Devops is not about just writing Scripts or implementing tools             
+ 
+          
+## WHAT IS DEVOPS
+-------------------
+ 
+   Devops is practice that allows a single team to manage the entire 
+   application development life cycle , that is development, testing ,deployment ,and monitoring,
+
+## WHAT DOES DEVOPS DO 
+----------------------
+
+  --> Integrate developers and operations 
+  --> improves collaboration and productivity 
+  --> Automation Infrastructure 
+  --> Automating workflows 
+  --> continuously measuring application Performance 
+
+
+
+## SKILLS OF A DEVOPS ENGINEER 
+-------------------------------
+
+  @ SKILLS 
+     
+      ## TOOLS
+
+     --> Version control - GIT
+     --> Continuous integration -JENKINS
+     --> virtualization/containerization - DOCKER/KUBERNATES 
+     --> Configure management - Puppet/Ansible 
+     --> monitoring - Nagios  
+        
+     ## network skills 
+      --> general networking skills - establishing connection between the continuous / port forwarding/container orchestration  
+      
+      ## other Skills 
+
+        --> people skill  
+        --> process skills 
+        --> customer skill and empathy 
+        --> cloud Awareness 
+
+
+
+
+
+
+
+
+
+
+
+     
