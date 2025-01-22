@@ -133,6 +133,49 @@ Requirement & gathering Analysis
         --> cloud Awareness 
 
 
+## DEVOPS LIFE CYCLE
+----------------------
+
+1.Plan:(TOOLS:JIRA,TRELLO,TRICENTIS)
+ 
+      First stage of devops cycle, where you can plan, track, visualize and summarize , 
+      your project before working /staging it 
+
+2.CODE:(TOOLS:ECLIPS,GIT,SUBVERSION)
+
+      Second stage of devops cycle, where the developers write their code 
+
+3.BUILD:(TOOLS: APACHE ANT,JENKINS,MAVEN,GRADLE) 
+       
+      Third stage, build is a pre-release version and is identified by a build number, 
+      rather than by a release number
+
+4.TEST:(tools: Apache j master ,JUnit, Selenium)
+     
+      4th stage, Process of Executing automated tests as part of the software delivery pipeline 
+      in order to obtain feedback on the business risks associated  with a software release as rapidly as possible 
+
+5.RELEASE :(TOOLS ; TRACVIS,GITLAB,BAMBOO)
+      
+      This phase helps to code into a shared repository using ,you can detect and locate errors quickly and easily 
+
+6.DEPLOY: (TOOLS:AWS,CHEF,ANSIBLE)
+
+      Manage and maintain development and of software systems and servers in any completioned environment
+
+7.OPERATE:(TOOLS: AWS,CHEF,ANSIBLE)
+    
+     this phase is to the system upgraded with the latest update 
+
+8.MONITOR:(TOOL; Nagios, sensu, splunk)
+
+     it ensure that the application as desired and the environment is stable, it quickly determined 
+     when a service is unavailable and understand the underlying causes 
+ 
+
+
+
+
 
 
 
