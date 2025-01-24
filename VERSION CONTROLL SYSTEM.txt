@@ -8,7 +8,8 @@ VERSION CONTROLL SYSTEM:
  --> figuring out what happened 
  --> backup 
 
-## what is version control 
+## what is version control
+----------------------------
 
    version control is a system that documents changes made to be file or set of files .
    it allows multiple users to manage multiple revisions of the same unit of information.
