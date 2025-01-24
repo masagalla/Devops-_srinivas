@@ -1,0 +1,74 @@
+VERSION CONTROLL SYSTEM:
+-----------------------
+
+## why need version control system 
+
+ --> collaborating 
+ --> storing version 
+ --> figuring out what happened 
+ --> backup 
+
+## what is version control 
+
+   version control is a system that documents changes made to be file or set of files .
+   it allows multiple users to manage multiple revisions of the same unit of information.
+   it is a snapshot of your project over time 
+
+## version control types 
+
+    @ 1.local version control (LVC) :
+        
+         --> the practice of having the version database in the local machine 
+            
+            issues: multiple people working on the same project and local machine crashed we loosed the entire code  
+        
+            solution : centralized version control  
+
+
+   @ 2. centralized version control (cvc):
+       
+         --> local version control's issues are resolved by centralized version control 
+         --> in cvc , a central repository is maintain where all the versioned files are kept 
+         --> now users can checkout and check in files from their different computers at any time 
+
+          issue: in case of central server failure whole system goes down 
+
+          solution : Distributed version control 
+   
+   @ 3.Distributed version Control system (DVCS)
+
+         --> version database is stored at every users local system and at the remote server 
+         --> users manipulates the local fields and then upload the changes to the remote 
+         --> if any of the servers die a client server can be used to restore 
+
+
+
+ ## INTRODUCTION TO GIT:
+
+
+       git is an open source distributed version control system (DVCS) which records changes 
+       made to the fields lying employees on the speed ,data integrity and distributed ,
+       non-linear workflows 
+
+
+##GIT FILE WORK FLOW 
+
+       	the remote is the server where all the collaborates uploaded changes made to the fieles
+
+      @ local repository 
+         --> local repository is users copy of the version control database 
+         --> the users accesses all the files than local repository and push the change made to the local repository 
+
+
+
+
+
+
+
+
+          
+
+
+
+        
+           
