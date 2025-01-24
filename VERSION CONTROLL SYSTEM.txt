@@ -55,14 +55,47 @@ VERSION CONTROLL SYSTEM:
 
        	the remote is the server where all the collaborates uploaded changes made to the fieles
 
-      @ local repository 
+      @ local repository
+ 
          --> local repository is users copy of the version control database 
          --> the users accesses all the files than local repository and push the change made to the local repository 
 
+      @ work space
+ 
+        --> work space is users active directory 
+        --> the users modified existing fields and create the new files in this space 
+            git track this changes compared to your local repository 
 
+      @ staging Area/ index Area 
+       
+         --> stage area is a place whare all the modified files marked to be committed are placed 
 
+##COMMANDS
+----------
+  @ Clone 
+ 
+       clone is command creates a copy of an existing remote repository inside the local repository 
+  
+  @ add
+       add is a command which add the files from work space to staging area  
+  
+  @ commit
+  
+       commit command commits all the changes made in the staging area to local repository 
+  
+  @ push 
 
+       push command pushes all the changes made in the local repository to the remote repository 
+  
+  @ fetch 
 
+      fetch command collets the changes made in the remote repository and copies them to local repository  
+      this command does not affect our workspace 
+ 
+@ pull
+
+     pull like fetch , gets all the changes from the remote repository and copies them to local repository .
+     pull merges those changes to the current working direction 
 
 
 
