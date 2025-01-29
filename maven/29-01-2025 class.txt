@@ -1,0 +1,39 @@
+29-01-2025 class
+-----------------
+
+maven through terminal 
+
+--> install the maven tar file after verifying the signature 
+--> after installing the maven ,check its version from ubuntu terminal by using the below command 
+     @ mvn -version
+   
+  below commands will create a project using maven 
+
+
+[## maven archetype : generate -dgroup id =com.example-dartifactid=helloworld-darchetypeartifactid=mvn-archtype-quickstart-dinteractivemode=false ]
+
+
+maven life cycle phases 
+---------------------------
+
+validate : check if the project is correct having all the necessary information 
+
+compile : compile the source code of the project 
+ 
+test : test the compile source code using a suitable unit testing frameworks . these tests should not require the code be packaged or deployed  
+ 
+package : take the compiled code and package it i its distributable format such as a JAR 
+
+integration : process and deploy the package into an environment where integration tests can be run 
+
+verify : run and checks to verify the package is valid and meets quality criteria 
+
+install : install the package into the local repository for use as a dependency 
+
+deploy : done in an integration or release environment ,copies the final package to the remote repository for sharing with other developer and projects 
+
+
+
+what is .m2 (dot m2) folder ?
+
+it is local repository in windows 
