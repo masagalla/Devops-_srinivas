@@ -1,0 +1,80 @@
+install and configuration of MAVEN and JAVA ON WINDOWS 
+-------------------------------------------------------
+1.download the maven zip file and extract 
+
+    go to google search bar
+             |
+   Apache maven download
+             |
+    Binary zip archive 
+             |
+ (click on link: pache-maven-3.9.9-bin.zip)
+             |
+   once the download is completed we need extract that zip file 
+
+2.add MAVEN_HOME System variable 
+
+   1. Open the Start menu and search for environment variables.
+   2. Click the Edit the system environment variables result.
+   3. Under the Advanced tab in the System Properties window, click Environment Variables.
+   4. Click the New button under the System variables section to add a new system environment variable.
+   5. Enter MAVEN_HOME as the variable name and the path to the Maven directory as the variable value. Click OK to save the new system variable.
+
+
+Step 3: Add MAVEN_HOME Directory in PATH Variable
+
+   1. Select the Path variable under the System variables section in the Environment Variables window. 
+       Click the Edit button to edit the variable.
+   2. Click the New button in the Edit environment variable window
+   3. Enter %MAVEN_HOME%\bin in the new field. Click OK to save changes to the Path variable.
+
+
+Note: 
+     Not adding the path to the Maven home directory to the Path variable causes the 'mvn' is not recognized as an internal or external command,                       operable program or batch file error when using the mvn command.
+
+
+4. Click OK in the Environment Variables window to save the changes to the system variables.
+
+
+Step 4: Verify Maven Installation
+
+        In the command prompt, use the following command to verify the installation by checking the current version of Maven:
+ 
+
+
+          JAVA DOWNLOAD AND CONFIGURATION ON WINDOWS
+         --------------------------------------------
+        go to google search bar 
+                 |
+      type :download java on windows 
+                |
+        select java oracle 
+                |
+           downloads 
+               |
+     select latest version JDK23 (WINDOWS)
+               |
+          X64 installer (link)
+
+
+          After download 
+
+   add java to system variable and add java_home variable 
+
+
+
+  
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
