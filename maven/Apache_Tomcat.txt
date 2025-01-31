@@ -51,6 +51,91 @@ Apache Tomcat > bin >showdown
    127.0.0.1:8080
    
 
+   Date : 31-01-2025
+   -------------------
+      apache tomcat folder structure
+ 
+  --> conf = stores tomcats configuration files 
+
+  --> logs = stores the log files related to tomcat operations 
+ 
+  --> webapps = The default deployment directory for web applications.
+ 
+  --> work = stores compiled JSP files and servlet-generated code 
+ 
+  --> bin = it contains scripts and executable files to start and stop tomcat 
+ 
+  --> temp = used by tomcat to store temporary files such as extracted.war files 
+
+
+          how to Access an Application
+         ------------------------------
+   
+     URL Of the tomcat (127.0.0.1:8080 (or) localhost:8080)/aja  [where aja is Artifact]
+
+
+      The command to get the project 
+      --------------------------------
+
+   mvn Archetype:generate -Dgroupid=com.example.aja -Dartifactid=Aja-DarchetypeArtifactid=maven -archetype -webapp -Dinteractivemode =false 
+
+
+      ## how can we place the artifact from maven project of target folder to Apache tomcat web-app folder 
+                 
+             " cp<pathwhereartifact><pathwherewebappsoftomcat>
+               cp<source><destination>
+               <>destination>cp<source>  
+
+     configuration changes
+    -------------------------
+
+    we need to restart the servers.
+
+          [ To change the port no.of the apchache tomcat we should stop the tomacat than change the default port no to other port no than we can start.]
+   
+
+   --> To deploy the application in another way is by using tomacat GUI(graphical user interface )
+
+        Access the URL of tomcat then search for the .war file to deploy 
+                    
+         [click on the choose file it will open dialogue box in dialogue box we need to select the artifact and
+          click on the open then we need to click on deploy button] 
+
+
+          how can we access apache tomcat GUI 
+        
+          Go to tomcat home folder 
+         
+           home folder of Apache tomcat--->conf
+           modify " tomcat -user.xml"(using text editor eg:vi)
+            vi tomcat-user.xml
+           we need to search for 
+                |
+           go to below line 
+          <user username ="admin" 
+          need uncomment those lines[ "!--" and "-->"]
+          once we modify tomcat-user.xml file save and quit 
+
+## what is the difference between pom.xml and setting.xml
+
+
+
+
+
+            
+                         
+            
+
+               
+
+
+
+
+
+
+
+
+
 
      
 
