@@ -73,34 +73,112 @@ VERSION CONTROLL SYSTEM:
 
 ##COMMANDS
 ----------
-  @ Clone 
+  1. Clone 
  
        clone is command creates a copy of an existing remote repository inside the local repository 
   
-  @ add
+  2. add
        add is a command which add the files from work space to staging area  
   
-  @ commit
+  3. commit
   
        commit command commits all the changes made in the staging area to local repository 
   
-  @ push 
+  4. push 
 
        push command pushes all the changes made in the local repository to the remote repository 
   
-  @ fetch 
+  5. fetch 
 
       fetch command collets the changes made in the remote repository and copies them to local repository  
       this command does not affect our workspace 
  
-@ pull
+ 6 pull
 
      pull like fetch , gets all the changes from the remote repository and copies them to local repository .
      pull merges those changes to the current working direction 
 
 
-
+7 git init
+     initializes a new Git repository. It creates a .git directory in your project, allowing you to track changes, commits, and manage version 
+     control for your project. This is the first step in starting a new repository in Git.
           
+8 git config --global user.name "username" : 
+       command sets your name for all commits across all Git repositories on your machine(To know who did what)
+
+
+
+9. git config --global user.email "emailid" : command sets your email address for all commits across all repositories on your machine
+
+
+
+10. git config --global user.name : To check the users
+
+
+11. git config --global user.mail : To check the users email id's
+
+
+12. git config --global --list : To check all the users and mails
+     
+13. git log..... 
+    command is used to view the commit history in a Git repository. It shows a list of past commits, including details like commit hash, author, 
+    date, and commit message.
+
+14.git log --oneline
+      
+       actually  commit id consist of 40 characters in the aplhanumeric but
+
+       this  command is used to display the commit history in a simplified, one-line format,
+
+        Command displays the commit id in the short(7 digits)
+ 
+15.git diff "commit id"
+
+        this command it will show the difference bwtween two commit id's
+        
+         how can we use git diff command
+
+         1.  git diff  for ( Compare Unstaged Changes (Working Directory vs. Last Commit):)
+         2.  git diff --staged for  (Compare Staged Changes (Staging Area vs. Last Commit):)
+         3.  git diff <commit1> <commit2> for (Compare Two Commits:)
+         4.  git diff <commitID>  for (Compare a Commit with the Working Directory)
+         5.  git diff <file-name> for (Compare Files)
+
+ 16. git branch : 
+           command list all the branches and mainly it shows which branch you are in
+ 
+ 17. git branch "branch-name" : 
+           command used to create a new branch
+
+ 18. git checkout -b "branch-name" : 
+           Command used to create a branch and switch to new branch
+
+
+19. git checkout "branch-name" : 
+           command used to switch one branch to another.
+
+
+20. git branch -m(move) oldbranch newbranch : command used to rename branch existing name
+
+
+21. git branch -d branch-name : command used to delete a branch
+
+
+22. git branch -D branch-name : command used to delete a branch forcefully (if we want to deleting a branch we can come out from on branch)
+
+23.git revert "commit-id"  mainpurpose is undo  
+
+           In simple terms, git revert is used to undo changes made by a specific commit. Instead of deleting the commit, it adds a new commit 
+           that reverses the effects of the original one, keeping the project history safe and intact.
+     
+        how can we use git revert command 
+
+          1. git revert <commitID> for (Revert a Specific Commit:)
+          2.git revert <commitID1> <commitID2> for (revert multiple commits )
+          3.git revert <oldest-commitID>^..<newest-commitID> for (Revert a Range of Commits:)
+
+
+
 
 
 
