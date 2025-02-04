@@ -97,18 +97,124 @@ how to deploy the application or Artifact
  
 
    How can we change default -port no.of wildfly 
-                   -mamt console and Application port.no
+                   -mamt console and Application port.no ?
 
-   how we can configure master-slave architecture in wildfly 
+   how we can configure master-slave architecture in wildfly ?
 
 
+   Configuration Changes
+-------------------------
 
+  things to keep in mind before changing configurational changes 
+
+   1. where to change 
+   2. backup
+   3. how to change 
+   4. Try or experiment in local environment 
+   5. Documentation 
+    
        
+snapshot/Backup 
+
+  for wildfly configuration 
+     --> home folder of wildfly -->standalone-->configuration-->stanadalone_xml_history
+        file name: standalone.v1
+      standalone_portcange.v2
+
+need to rename the original or existed file and replace the customized as per requirement/change 
+
+
+## Different states types of artifacts deployed in wldfly
+----------------------------------------------------------
+
+  in wildfly ,deployed artifacts can have various status states including
+       
+        "deployed"
+        "undeployed"
+        "failed"
+        "disabled "
+        "suspended"
+
+deployed 
+      
+      the Application is successfully running on the wildfly server and accessible to users 
+
+undeployed
+
+      the application has been removed from the server and is not currently running 
+
+Failed
+        
+      the deployment process encountered an error and the application is not running 
+
+
+disabled 
+      
+      The Application is intentionally stopped administrator and cannot be accessed until enabled 
+
+suspended 
+
+      the Application is temporarily paused  and can be resumed later 
+
+Redeployed 
+
+      The application is temporarily being updated with new code and is not fully available while the redeployed process is ongoing 
+
+
+Accessing deployment status 
+----------------------------
+
+wildfly management console :
+
+    you can view the status of deployed artifacts through the wildfly admin console ,
+    which provides a list of deployment with their current state  
+  
+CLI(Command line interface )
+
+     using the wildfly command -line interface ,you can query the state of deployments with management commands 
+
+
+indicating whether the application is currently running not deployed encountered an error during deployment intentionally deactivated ,
+temporarily paused or is in the process of being re-deployed with updates 
+
+
+Domain & Host controller in Wildfly 
+-----------------------------------
+in jboss wildfly , a "domain controller " is the central management point for a group of servers within a domain ,responsible for maintain 
+overall configuration and policy .
+
+while a "host controller " is a separate process running on each server within the domain communicating with the domain controller to manage the individual server instances on the host machine 
+
+Essentially ,the domain controller dictates the overall configuration ,and the host controllers execute those configuration on their respective servers 
+
+
+key Points about domain and host controller
+-----------------------------------------
+
+Domain controller:
+-----------------
+
+--> Acts as the cetrall management point for the entire domain 
+--> Stores the domain -wide configuration in a life called "domain.xml"   
+     (Home Folder-->Domain-->Configuration-->Domain.xml)
+--> Responsible for distributing configuration changes to all host controllers within the Domain 
+
+
+Host Controller:
+-----------------
+
+--> manage the application the server instances running on a specific host 
+--> read its configuration from a "host.xml" file Specific to that host 
+      (Home folder-->domain-->configuration-->host.xml)
+--> communication within the domain controller to receive configuration updates and starts/stop server instances 
+
+
+Domain is referring to centralized or master where we can manage other wildfily servers (other means host) 
+      
 
 
 
-
-
+     
 
 
 
