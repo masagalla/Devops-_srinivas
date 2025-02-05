@@ -1,0 +1,255 @@
+                                                  JENKINS
+                                                 ---------
+
+CICD:
+
+Continuous integration & Importance (CICD)
+-----------------------------------
+      
+   Importance of Integration 
+
+1. Improves quality
+    
+         improves the quality by running multiple unit test and analysis various static code 
+
+
+2. increase Productivity 
+
+         Automating build code saves a lot of time , there by increasing productivity 
+
+3. Reduces Risk
+
+         Eliminate the risk of potential human errors by Automating test 
+
+
+                      INTRODUCTION TO JENKINS 
+                    ---------------------------
+
+
+ Features of Jenkins 
+
+   1. easy installation process
+   2. provides advance security
+   3. optimized Performance 
+   4. Upgrades are easily available 
+   5. light weight container support
+   6. Distributed team management 
+
+
+
+What is Continuous Integration ?
+
+   "it is the process of automating the building and testing of code , 
+    each time one of the team member commits changes to version controll"
+
+ CI---continuous integration 
+ CD---continuous deliver(release)/ deployment
+
+
+
+Popular tools for continuous integration 
+
+   Gitlab
+   Codeship
+   Bamboo
+   Jenkins 
+   Teamcity 
+   Travis CI
+
+
+ ---> from AWS cloud if we wanted to perform CI/CD ,so there are various services like code commit,  
+      code deploy and code guru ,AWS code build ,AWS code commit 
+      AWS code Deploy, AWS code pipeline  
+ 
+
+ ---> From Azure cloud we have Azure Devops ,Azure Board, Azure Repos Azure Test Plane , Azure Pipeline ,Azure Artifacts 
+
+What is Jenkins:
+
+     "A continuous integration server or Automation server which manages and control process 
+      such as plan, code, build, deploy, operate and monitor in Devops Environment "  
+
+
+Why Jenkins is so popular
+
+       Open source 
+       good plugin support  
+       good community support
+       fast and Reliable 
+       good od support 
+       scripted builds     
+
+
+TOPICS:
+
+   --> Jenkins Architecture 
+   --> Plugin management in Jenkins 
+   --> Jenkins security management 
+   --> Notification in Jenkins 
+   --> Jenkins master slave Architecture 
+   --> Jenkins Delivery pipeline 
+   --> Jenkins declarative pipeline   
+     
+
+Jenkins Architecture : Source control Management  
+
+
+                                                                                 ______________________________
+                              --------------------------------------------       | is branch tests ,release or|
+    Git hub---> Jenkins ---> |build+unit test -->function test --> deploy |----->| production                 |
+                             ----------------------------------------------      _________________________________         
+                                                                                   |           |                  |
+                                                                         test environment Releas environment   Production Environment
+
+
+
+  Plugin management in Jenkins 
+  -----------------------------
+                           -----
+                           |tabs|
+                           ------
+                              | 
+     ______________________________________________
+     |                |                |           |
+   updates         Available       Install       advanced 
+
+
+      (why we need plugins : To have extra Functionalities)
+    
+
+
+  updates : shows the updates to plugins already installed 
+ 
+  Available : Shows plugins that are available for installation
+
+  Installed : Displays Plugins installed that have no updates 
+
+  Advanced : list configuration of HTTP proxy ,allows manuall upload of plugin and URL of plugin site 
+
+
+   " in real time we can not installed the plugins as simple as that reason being they might be challenges with 
+     proxy settings as well as VPN in order to avoid we should configured HTTP proxy in plugin of Advanced tab"
+
+
+
+   How to install Jenkins on windows 
+   ----------------------------------
+
+Different ways of installations 
+
+  by using Docker 
+     using Kubernetes 
+     using war File 
+     Offline installations 
+
+Pre-Requisites 
+
+  ## minimum -hardware requirement 
+       ---> 256 MB of RAM 
+       ---> 1 GB of drive space (although 10GB is a recommended minimum if Jenkins as a Docker Container)
+  ## Recommended hardware configuration for a small Team 
+       --> 4 GB of RAM
+       --> 50 GB of drive Space 
+
+
+  ## Jenkins Tool is develop on the Java code 
+
+     
+Pre-requisites 
+      
+  ---> A system running windows 10
+  ---> the latest copy of java development kit or java runtime environment installed 
+
+
+installation process : Steps 
+---------------------
+  
+   browse to download page of Jenkins under the downloading Jenkins section is list of installers for the long tern support (LTS)
+   version of Jenkins .click the window link to began the download .
+   
+     Download Jenkins 2.479.3 
+   
+   once you click on windows text under download Jenkins 
+
+
+ 1. once after downloading need to go to downloaded folder double click on Jenkins which is of type windows installed package 
+
+ 2. the setup wizard starts ,click next to proceed 
+ 
+ 3. select the install destination folder and click next to continue 
+ 
+ 4. under the run service as a local or domain user option, enter password for the domain username and password for the 
+    user account you want to run Jenkins  
+
+ 5. Under the Run service as a local or domain user option, enter the domain username and password for the user account you want to run Jenkins with. Click       Test Credentials to verify the login data, then click Next to proceed.
+
+6. Enter the port number you want Jenkins to run on. Click Test Port to check if the selected port is available, then click Next to continue.
+
+7. Select the directory where Java is installed on your system and click Next to proceed.
+   
+ 
+8. Select the features you want to install with Jenkins and click Next to continue.
+
+9. Click Install to start the installation process.
+
+ 
+
+   How to Configure the Jenkins (Unblock Jenkins) 
+   ----------------------------
+
+After completing the installation process, you have to unblock Jenkins before you can customize and start using it.
+
+    1. In your web browser, navigate to the port number you selected during the installation using the following address:
+
+        example:   http://localhost:[port number]  or 127.0.0.1:8080
+
+
+    2. Navigate to the location on your system specified by the Unblock Jenkins page.
+
+       please copy the password from location 
+        
+         c:programDate\Jenkins\Jenkins\secretes\initialAdminPassword
+      
+            where : initialAdminPassword is file 
+
+             ( in order to read the data of that file use cat command )
+
+                (cat c:programDate\Jenkins\Jenkins\secretes\initialAdminPassword )   
+       copy the password from the initialAdminPassword file         
+
+    5. Paste the password in the Administrator password field on the Unblock Jenkins page and click Continue to proceed.
+
+
+          customize Jenkins 
+        --------------------
+
+
+   Once you unlock Jenkins, customize and prepare the Jenkins environment.
+
+
+1. Click the Install suggested plugins button to have Jenkins automatically install the most frequently used plugins.
+
+        (install the suggested plugins )
+   
+
+2. After Jenkins finishes installing the plugins, enter the required information on the Create First Admin User page. Click Save and Continue to proceed.
+
+
+ How to stop the Jenkins server on windows 
+-------------------------------------------
+
+in windows search option search for services and select search for Jenkins (left side top)
+
+
+how to restart the Jenkins
+----------------------------
+
+  safe restart 
+   go to URL of Jenkins 
+    http://located :8080/state Restart
+
+
+
+
+
+
