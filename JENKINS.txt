@@ -40,7 +40,7 @@ Continuous integration & Importance (CICD)
 What is Continuous Integration ?
 
    "it is the process of automating the building and testing of code , 
-    each time one of the team member commits changes to version controll"
+    each time one of the team member commits changes to version control"
 
  CI---continuous integration 
  CD---continuous deliver(release)/ deployment
@@ -99,7 +99,7 @@ Jenkins Architecture : Source control Management
     Git hub---> Jenkins ---> |build+unit test -->function test --> deploy |----->| production                 |
                              ----------------------------------------------      _________________________________         
                                                                                    |           |                  |
-                                                                         test environment Releas environment   Production Environment
+                                                                         test environment Release environment   Production Environment
 
 
 
@@ -124,7 +124,7 @@ Jenkins Architecture : Source control Management
 
   Installed : Displays Plugins installed that have no updates 
 
-  Advanced : list configuration of HTTP proxy ,allows manuall upload of plugin and URL of plugin site 
+  Advanced : list configuration of HTTP proxy ,allows manual upload of plugin and URL of plugin site 
 
 
    " in real time we can not installed the plugins as simple as that reason being they might be challenges with 
@@ -247,6 +247,214 @@ how to restart the Jenkins
   safe restart 
    go to URL of Jenkins 
     http://located :8080/state Restart
+
+
+   06-02-2025
+  -------------
+
+Plugin Installation 
+-------------------
+
+There are 2 ways to install the plugin one is Automatically and second one is Manually 
+
+ Automatically 
+--------------
+
+once login Jenkins GUI left side you will see the option of manage Jenkins , click on manage Jenkins 
+in 1st tab there is a system configuration under that see plugin.
+
+click on the plugin go to available plugin and search for plugin and search for the plugin within is required.
+
+select the plugin under the list once you select the plugin install button will be highlighted than click on install button 
+
+
+ Manually
+--------
+  
+under plugin tab go for available plugin and search for plugin click on the plugin which is required .
+
+once you click on the plugin new tab will open .click on releases under release you will see various of the plugins 
+go for the plugin which is required specific version 
+
+under the install options 
+
+  under the download direct link once you click on direct to local system .
+
+
+when we download plugin in manual way again we need to deploy in Jenkins 
+
+in Jenkins GUI plugins tabs click on Advanced settings choose file the file button to upload which is downloaded to local system 
+
+---> when we install in Automatic way plugins extension is JPI (Jenkins plugin)
+
+---> when we install in manual way plugin extension is HPI(Hudson plugin)
+
+ 
+
+ How to uninstall the plugin
+----------------------------------
+
+manage Jenkins-->plugins-->install plugins -->search plugin name 
+
+which we want to uninstall select the plugin and than uninstall button 
+will be highlighted once clicked uninstall plugin will get uninstall 
+
+
+ How to updated the Plugin 
+--------------------------
+
+manage Jenkins --> plugins -->updates 
+
+select the plugin and the click on update button will be highlighted once clicked on update plugin will get updated.
+
+
+" In real time we should not updated the plugin directly reason being there may be changes the encountered to update the plugin in our local 
+   machines where other team member will not may affective "
+
+
+How to Create The users 
+-------------------------
+
+manage Jenkins --> than security -->users (users create/delete/modify users that can login to this Jenkins )
+
+
+click user--> create user button-->click on it will ask
+  
+              username 
+                 |
+              password
+                 |
+             configuration
+                  |
+               full name 
+                  |
+                E-mail ---> click on create user name button
+
+
+
+
+
+how to give permission to the users 
+------------------------------------
+
+manage Jenkins -->security (secure Jenkins define who is allowed to access use the system)-->click on security -->authorization -->add user button(click on it )--> it will as user id ---> than click on ok button --> than give the required permission to user by checking the box (the minimum access is to give overall read) 
+
+
+  By default whatever we create users for Jenkins will get stored in Jenkins own user database .this is suitable for small set up where you have no 
+  existing user database else where 
+
+
+    other option is LDAP (lightweight directory Access protocol)
+
+
+
+
+Authorization Strategies
+--------------------------
+
+By default we will be seeing project based metrics Authorization strategy with this we can manage the Authorization based on the option 
+ available under strategy 
+
+
+example: credentials , agent ,job, run, view etc
+
+
+matrix Authorization Strategy (real time)
+
+matrix Authorization allow configuring the lowest level permissions such as starting new builds , configuring items, or deleting them ,individually 
+
+RBAC (role based access controll)  one of the way where we can secure Jenkins 
+
+   
+Jenkins Project (project or job)
+-----------------------------------
+
+it is a combination of one or more tasks 
+
+--> free style project -defining in GitHub (task)
+     
+           click general purpose job types that check out from up to one SCM, executes build steps serially , followed by post-build steps 
+           like archiving artifacts and sending email notification    
+
+--> maven project 
+--> pipeline (workflow)
+    
+      Orchestrates long-running activities that can span multiple build agents . Suitable for building pipeline (formerly known as workflows )and /org organizing complex activities that do not easily fit in free- style job type 
+
+
+--> Multi-configuration project 
+     
+       suitable Projects that need a large number of different configurations, such as testing on multiple environments, platform-specific builds, etc
+
+
+
+---> Folder 
+
+       creates a container that stores nested items in it .useful for grouping things together .unlike view, which is just a filter, a folder creates a separate namespace, so you can have multiple things of the same name as long as they are in different folders 
+
+---> multibranch pipeline 
+
+      creates a set of pipeline projects according to detected branches in one SCM
+
+---> Organization folder
+
+    Create set of multibranch projects subfolders by scanning for repositories 
+
+
+
+
+   How to create job or project
+   -----------------------------
+
+in Jenkins GUI to the left side click on this new item , enter an item name or job name 
+
+than select an item --> click on ok which will be highlighted 
+
+ the job configuration is consist of where we can give information or description about the project , general  
+ 
+
+your code management where we will be passing users of the repositories , build triggers in what way we wanted to trigger or build that job build environment, build steps (where we can add tasks post-build actions )
+
+ How to create free style basic Job 
+
+     new item 
+
+    enter item name 
+
+  select item type and click on ok 
+
+   go to the build steps  configuration of the job on add  build steps dropdown select execute windows batch command 
+
+ --> Blue Ocean(plugin )  rethinks the Jenkins user experience 
+
+  designed from the group for Jenkins pipeline and compatible with freestyle jobs . 
+    
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
