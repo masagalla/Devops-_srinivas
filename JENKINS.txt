@@ -429,6 +429,170 @@ your code management where we will be passing users of the repositories , build 
 
   designed from the group for Jenkins pipeline and compatible with freestyle jobs . 
     
+           (07-02-2025)
+         --------------
+
+what if Jenkins user forget the password
+----------------------------------------
+
+As a Jenkins administrator there is provision to reset the users credentials 
+
+
+manage Jenkins-->security--> users  which need to be reset and click on security (left side you will be see option)
+
+password and confirmation password (where we can change the password and click on save)
+
+once as a administrator change the password again you need to inform to user saying follow steps to change password 
+
+once logged into the Jenkins GUI 
+
+click on user name (top right corner )
+       |
+    security
+       |
+where we can change the password 
+       |
+  click on save 
+    
+
+## Slaves , Nodes ,Agents these 3 terminologies are same in Jenkins 
+
+ 
+
+Jenkins Folders
+---------------
+
+in windows OS we can see all Jenkins information and configuration under path is 
+
+   c:\programdata\Jenkins\.jenkins \
+
+under Jenkins folder
+--------------------
+  we can see users folder (where all the Jenkins users data available)
+
+work space 
+-----------
+
+where all the configuration jobs information available 
+
+
+secretes 
+---------
+
+where all the configuration secretes are available 
+
+plugins
+-------
+All the plugins (which are installed manually & Automatically )available 
+
+Nodes 
+-----
+  where all the configuration nodes are available 
+
+logins
+------
+
+we can see slaves (if configured) and tasks logs are available 
+
+
+Apart from the above folder there is Jenkins configuration file namely "config.xml"
+ (if at all changing the config.xml file first take backup of the file )
+
+
+
+we can also see the Jenkins logs in Jenkins GUI
+
+path: manage Jenkins -->status information -->system logs -->all Jenkins logs 
+  once click it we can see all the log details of log.
+
+
+
+## we can see the Jenkins version bottom right corner in Jenkins GUI
+
+and also path : manage Jenkins --> status -->information-->about Jenkins (here also we can see the version) 
+
+
+
+## Ways to Trigger jobs
+------------------------
+
+there are 5 ways 
+
+1. trigger build remotely (e.g from cripts)
+
+   Enable this option if you would like to trigger new builds by accessing a special predefined URL (convenient for scripts).
+   You'll need to provide an authorization token in the form of a string so that only those who know it would be able to remotely trigger this project's  builds.
+ This is most useful when your Jenkins instance grants read access to this job to anonymous users.
+ When that's not the case, Jenkins will reject requests sent to the trigger URL even when the correct token is specified.
+
+  Use the following URL to trigger build remotely: JENKINS_URL/job/Aja%20team/build?token=TOKEN_NAME or /buildWithParameters?token=TOKEN_NAME
+
+
+2. Build After other projects are build (up stream and down stream )
+
+     Set up a trigger so that when some other projects finish building, a new build is scheduled for this project. This is convenient for running an extensive test after a build is complete, for example.
+  
+  we need to pause the project name (which are configured already )
+  under the Project 
+
+rigger only if build is stable
+Trigger even if the build is unstable
+Trigger even if the build fails
+Always trigger, even if the build is aborted 
+
+
+3. Build Periodically (in schedule )
+
+     this fields follows the syntax of cron (with minor different )specifically each line consists of 5 fields separated by TAB or whitespace 
+     
+      MINUTE	Minutes within the hour (0–59)
+HOUR	The hour of the day (0–23)
+DOM	The day of the month (1–31)
+MONTH	The month (1–12)
+DOW	The day of the week (0–7) where 0 and 7 are Sunday.
+To specify multiple values for one field, the following operators are available. In the order of precedence,    
+
+
+
+4. GitHub hook trigger for GitSCM polling 
+
+      When Jenkins receives a GitHub push hook, GitHub Plugin checks to see whether the hook came from a GitHub repository which matches the Git repository     defined in SCM/Git section of this job
+
+5. polls SCM 
+
+    Configure Jenkins to poll changes in SCM.
+
+
+
+## trigger means running the job 
+
+
+we can also trigger the jobs manually  apart from above 5 ways 
+
+
+
+
+
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
