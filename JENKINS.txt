@@ -518,6 +518,8 @@ and also path : manage Jenkins --> status -->information-->about Jenkins (here a
 
 there are 5 ways 
 
+  set up automated actions that start your build based on specific events like code changes, schedule times 
+
 1. trigger build remotely (e.g from cripts)
 
    Enable this option if you would like to trigger new builds by accessing a special predefined URL (convenient for scripts).
