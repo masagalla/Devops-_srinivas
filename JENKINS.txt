@@ -829,6 +829,65 @@ another way create Jenkins user
 manager Jenkins -->security-->allow user to sign up 
 
 
+                          13-0-2025
+                         ----------
+
+
+Tools configuration in Jenkins
+------------------------------
+
+--> if at all we wanted to configure tools like Apache maven , Docker etc
+
+
+--> we need to go the manager Jenkins-->system configuration-->tools 
+
+(configure tools their location and automatic installers  example: to configure Apache maven specification versions(3.6.0) )
+
+under that 
+
+--> to configuration Apache maven in tools tab we should install plugin Apache maven , than only we can able to see maven installation in tools 
+
+---> click on add maven -->we can go for specific required to install automatically we should check the Automatically check the automatically check box option. 
+ 
+
+How to trigger a job Remotely
+-----------------------------
+
+To configure this kind of requirement we can make use of trigger _trigger_BUILD remotely .
+
+
+using Authentication token 
+
+create a free style job with name "Build remotely " check box the trigger builds remotely option and configure 
+and build step with authentication token(aja-123) and Save it and to check this job use the below URL
+
+syntax remote URL:JENKINS_URL/job/buildremotely/build?token=TOKEN_NAME.
+
+  where =Jenkins_URL is  Jenkins listening 
+
+   build remotely is job name 
+TOKEN_NAME is Authentication token which we configured .
+
+eg: localhost:8999/job/buildremotely/build?token=aja123
+
+
+
+Another way of trigger the job remotely 
+---------------------------------------
+
+
+in order to trigger job (example job2)
+
+we can go for the below command  
+
+
+curl -u admin:<API-TOKEN>-X POST location :8999/job/job2/build
+
+
+  where = _u is user (admin)
+API-TOKEN which as to generated with the user admin 
+host is a method to call the URL 
+
 
 
 
